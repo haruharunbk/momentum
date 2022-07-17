@@ -1,0 +1,241 @@
+@import url(reset.css);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	font-family: "Jost", sans-serif;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	color: #fff;
+	text-shadow: 1px -1px 6px rgba(94, 94, 94, 0.7);
+}
+
+img {
+	position: relative;
+	width: 100vw;
+	overflow: hidden;
+	margin-top: -12vh;
+	z-index: -1;
+}
+
+section {
+	position: absolute;
+}
+
+#container > span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	color: #ccc;
+	backdrop-filter: blur(4px);
+	z-index: 1;
+}
+
+.hidden {
+	display: none !important;
+}
+
+h1 {
+	position: relative;
+	z-index: 1;
+	width: 100vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-weight: 500;
+	font-size: 3.5rem;
+	margin-top: 25vh;
+	letter-spacing: 0.2rem;
+}
+
+#login_form {
+	position: relative;
+	width: 100vw;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+	font-weight: 500;
+	margin-top: 25vh;
+	letter-spacing: 0.2rem;
+	height: 8rem;
+	z-index: 10;
+}
+
+#login_form > input:first-child {
+	background: none;
+	border: 0;
+	border-bottom: 2px solid #fff;
+	padding: 0;
+	width: 400px;
+	text-align: center;
+	height: 70px;
+}
+#login_form > input:last-child {
+	background: none;
+	border: 0;
+	text-align: center;
+	height: 40px;
+	color: #fff;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+#login_form > input::placeholder {
+	color: #fff;
+	font-size: 2.8rem;
+	text-shadow: 1px -1px 6px rgba(168, 168, 168, 0.5);
+}
+#login_form > input[type="text"] {
+	position: relative;
+	z-index: 5;
+	color: #fff;
+	font-size: 3rem;
+}
+#clock {
+	position: relative;
+	width: 100vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-weight: 500;
+	font-size: 4.3rem;
+	font-weight: 500;
+	letter-spacing: 0.7rem;
+	z-index: 1;
+	margin-top: 2vh;
+	letter-spacing: 1rem;
+}
+
+#quote {
+	position: absolute;
+	z-index: 1;
+	height: 15vh;
+	width: 100vw;
+	margin-top: 22vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-content: center;
+	text-align: center;
+}
+#quote span:first-child{
+	font-size: 1.2rem;
+	font-weight: 500;
+	display: inline-block;
+	margin-bottom: 7px;
+}
+
+#todo_form{
+	position: absolute;
+	z-index: 10;
+	width: 100vw;
+	top: 2vh;
+	left: 4vh;
+}
+
+#todo_form input {
+	background: none;
+	outline: none;
+	border: 0;
+	padding: 0;
+	color: #fff;
+	position: absolute;
+	top: 2vh;
+	left: 4vh;
+	font-size: 1rem;
+	padding-bottom: 1vh;
+	border-bottom: 2px solid #fff;
+	width: 20vw;
+	line-height: 25px;
+	padding-left:10px;
+}
+
+#todo_form input::placeholder {
+	color: #fff;
+}
+
+#todo_list {
+	position: absolute;
+	z-index: 2;
+	top: 10vh;
+	left: 10vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 10px;
+}
+input#checkbox {
+	appearance: none;
+	background: transparent;
+	border: none;
+	border: 2px solid #fff;
+	padding: 4px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+.new_todo {
+	margin-bottom: 6px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 20vw;
+	padding: 5px 10px;
+}
+
+.input_box input{
+	cursor: pointer;
+} 
+
+.input_box span{
+	font-size: 1.2rem;
+	text-shadow: 2px 2px 0 #000;
+}
+
+button.delete {
+	border: 0;
+	background: none;
+	color: #fff;
+	font-size: 1.2rem;
+	cursor: pointer;
+}
+.line {
+	display: inline-block;
+	text-decoration: line-through;
+	text-decoration-color: #f00;
+	text-decoration-thickness:2px;
+}
+
+#weather {
+	position: absolute;
+	z-index: 1;
+	top: 5vh;
+	right: 4vh;
+}
+
+#weather span{
+	margin-right: 10px;
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+#weather span:last-child{
+	margin-right:0px;
+}
+
+
+
+
+@media screen and (max-width: 1660px) {
+	img {
+		height: 100vh;
+	}
+}
