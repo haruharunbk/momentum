@@ -13,7 +13,7 @@ function saveToDos(){
 function deleteToDo(event){
 	const parentLi = event.target.parentElement;
 	parentLi.remove();
-	toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
+	toDos = toDos.filter((toDo) => toDo.id !== parseInt(parentLi.id));
 	saveToDos();
 }
 
@@ -45,6 +45,7 @@ function paintToDo(newToDo){
 	li.addEventListener("mouseout", () => {
 		btn.classList.add("hide");
 	});
+
 	btn.addEventListener("click", deleteToDo);
 
 	li.appendChild(div);
@@ -79,7 +80,7 @@ if(savedToDos !== null){
 
 const inputItem = document.querySelectorAll(".input_box input");
 inputItem.forEach(item => {
-	item.addEventListener("click", function () {
+		item.addEventListener("click", function () {
 		this.nextSibling.classList.toggle("line");
 	});
 })
